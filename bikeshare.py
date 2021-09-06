@@ -170,6 +170,8 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
+
 def display_raw_data(city):
     """
     The fuction takes the city name from get_filters fuction as input 
@@ -177,7 +179,7 @@ def display_raw_data(city):
     Args:
         (str) city - name of the city to return the raw data.
     Returns:
-        df - raw data of that city by chunks of 5 rows.
+        display_raw - raw data of that city by chunks of 5 rows.
     """
     print('\nRaw data is available to check... \n')
 
