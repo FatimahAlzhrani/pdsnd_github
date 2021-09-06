@@ -11,8 +11,9 @@ def get_filters():
     Asks user to specify a city, month, and day to analyze.
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington).
     
     city = input('\nWhich city would you like to filter by?\nNew York City \nChicago \nWashington\n').strip().lower()
     while city not in(CITY_DATA.keys()) :
@@ -22,7 +23,6 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june','all']
-
     month = input('Which month would you like to filter by?- January, February, March, April, May, June or all?\n ').strip().lower()
     while month not in months:
         print('invalid input. Please enter a valid value.')
@@ -32,14 +32,10 @@ def get_filters():
     
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days= ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
-    
     day = input ("Do you want details specific to a particular day? If yes, type day name else type 'all'. \n").strip().lower()
-    
     while day not in days:
         print('invalid input. Please enter a valid value.')
         day = input("Do you want details specific to a particular day? If yes, type day name else type 'all'.").strip().lower()
-   
-        
 
     print('-'*40)
     return city, month, day
@@ -50,8 +46,6 @@ def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
     """
-
-    
    # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
