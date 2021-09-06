@@ -12,7 +12,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington).
     
     city = input('\nWhich city would you like to filter by?\nNew York City \nChicago \nWashington\n').strip().lower()
     while city not in(CITY_DATA.keys()) :
@@ -186,9 +186,9 @@ def display_raw_data(city):
     The fuction takes the city name from get_filters fuction as input 
     and returns the raw data of that city by chunks of 5 rows.
     Args:
-        (str) city - name of the city to return the raw data.
+        (str) display_raw - name of the city to return the raw data.
     Returns:
-        df - raw data of that city by chunks of 5 rows.
+        /city - raw data of that city by chunks of 5 rows.
     """
     print('\nRaw data is available to check... \n')
 
