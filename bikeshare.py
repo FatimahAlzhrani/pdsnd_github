@@ -13,21 +13,21 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     
-    # get user input for city (chicago, new york city, washington).
+    # Filter by city: get user input for city (chicago, new york city, washington).
     
     city = input('\nWhich city would you like to filter by?\nNew York City \nChicago \nWashington\n').strip().lower()
     while city not in(CITY_DATA.keys()) :
             print ('invalid input. Please enter a valid value.')
             city = input('\nWhich city would you like to filter by?\nNew York City \nChicago \nWashington\n').strip().lower()
    
-    # get user input for month (all, january, february, ... , june)
+    # Filter by month: get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june','all']
     month = input('Which month would you like to filter by?- January, February, March, April, May, June or all?\n ').strip().lower()
     while month not in months:
         print('invalid input. Please enter a valid value.')
         month = input('Which month would you like to filter by? - January, February, March, April, May, June or all? ').strip().lower()    
     
-    # get user input for day of week (all, monday, tuesday, ... sunday)
+    # Filter by day: get user input for day of week (all, monday, tuesday, ... sunday)
     days= ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
     day = input ("Do you want details specific to a particular day? If yes, type day name else type 'all'. \n").strip().lower()
     while day not in days:
@@ -170,6 +170,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+
 def display_raw_data(city):
     """
      The fuction takes the city name from get_filters fuction as input 
@@ -177,7 +178,7 @@ def display_raw_data(city):
     Args:
         (str) city - name of the city to return the raw data.
     Returns:
-        df - raw data of that city by chunks of 5 rows.s
+        city- raw data of that city by chunks of 5 rows.s
     """
     print('\nRaw data is available to check... \n')
 
@@ -197,6 +198,7 @@ def display_raw_data(city):
           except KeyboardInterrupt:
             clear()
             print('Thank you.')
+
 
 def main():
     while True:
