@@ -11,6 +11,7 @@ def get_filters():
     Asks user to specify a city, month, and day to analyze.
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     
     # get user input for city (chicago, new york city, washington).
     
@@ -19,27 +20,19 @@ def get_filters():
             print ('invalid input. Please enter a valid value.')
             city = input('\nWhich city would you like to filter by?\nNew York City \nChicago \nWashington\n').strip().lower()
    
-
     # get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june','all']
-
     month = input('Which month would you like to filter by?- January, February, March, April, May, June or all?\n ').strip().lower()
     while month not in months:
         print('invalid input. Please enter a valid value.')
-        month = input('Which month would you like to filter by? - January, February, March, April, May, June or all? ').strip().lower()
-    
-    
+        month = input('Which month would you like to filter by? - January, February, March, April, May, June or all? ').strip().lower()    
     
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days= ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
-    
     day = input ("Do you want details specific to a particular day? If yes, type day name else type 'all'. \n").strip().lower()
-    
     while day not in days:
         print('invalid input. Please enter a valid value.')
         day = input("Do you want details specific to a particular day? If yes, type day name else type 'all'.").strip().lower()
-   
-        
 
     print('-'*40)
     return city, month, day
@@ -50,8 +43,6 @@ def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
     """
-
-    
    # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -85,7 +76,6 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-
     # display the most common month
     months = ['january', 'february', 'march', 'april', 'may', 'june']
     month = df['month'].mode()[0]
@@ -99,7 +89,6 @@ def time_stats(df):
     df['Start_hour'] = df['Start Time'].dt.hour
     common_hour = df['Start_hour'].mode()[0]
     print('Most Common Hour:', common_hour)
-
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
@@ -160,7 +149,7 @@ def user_stats(df):
     print(df['User Type'].value_counts())
     print('\n\n')
 
-    # Display counts of gender
+    # Display counts of gender 
     try:    
         gender_count = df['Gender'].value_counts().to_frame()
         print('Counts of each gender :\n' ,gender_count)
@@ -183,12 +172,12 @@ def user_stats(df):
 
 def display_raw_data(city):
     """
-    The fuction takes the city name from get_filters fuction as input 
+     The fuction takes the city name from get_filters fuction as input 
     and returns the raw data of that city by chunks of 5 rows.
     Args:
-        (str) display_raw - name of the city to return the raw data.
+        (str) city - name of the city to return the raw data.
     Returns:
-        /city - raw data of that city by chunks of 5 rows.
+        df - raw data of that city by chunks of 5 rows.s
     """
     print('\nRaw data is available to check... \n')
 

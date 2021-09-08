@@ -5,6 +5,7 @@
 ## Description
 In this project, we wrote a `code` that takes in raw input to create an _interactive experience_ in the terminal to compare a variety of **_descriptive statistics_** of the **bike-share** system usage between three large cities in the United States: Chicago, New York City, and Washington. We used data provided by [Motivate](https://www.motivateco.com/), a bike-sharing system provider for many major cities in the United States.
 
+
 ## Project Data
 - chicago.csv - Dataset containing all bikeshare information for the city of Chicago provided by Udacity.
 
@@ -22,15 +23,5 @@ In this project, we wrote a `code` that takes in raw input to create an _interac
 bikeshare.py
 
 
-## Credits
-- Ahmed Gharib:
-
-[Github](https://github.com/ahmed-gharib89)
-
-[Linkdin](https://www.linkedin.com/in/agharib89/)
-
-- Yash Motwani:
-
-[Github](https://github.com/YashMotwani)
 
 
