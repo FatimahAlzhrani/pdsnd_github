@@ -24,4 +24,17 @@ bikeshare.py
 
 
 
+## Credits
+- Ahmed Gharib:
+
+[Github](https://github.com/ahmed-gharib89)
+
+[Linkdin](https://www.linkedin.com/in/agharib89/)
+
+- Yash Motwani:
+
+[Github](https://github.com/YashMotwani)
+
+
+
 
